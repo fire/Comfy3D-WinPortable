@@ -212,7 +212,7 @@ https://github.com/YanWenKun/Comfy3D-WinPortable/raw/refs/heads/main/docs/cuda-t
 
 1.3. 安装 Visual Studio Build Tools 2022
 （
-https://visualstudio.microsoft.com/downloads/?q=build+tools[下载页面]
+https://visualstudio.microsoft.com/visual-cpp-build-tools/[下载页面]
 |
 https://aka.ms/vs/17/release/vs_BuildTools.exe[安装程序]
 ）

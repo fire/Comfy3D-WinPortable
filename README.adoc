@@ -186,7 +186,7 @@ are needed to install.
 
 1.2. Install Visual Studio Build Tools 2022
 (
-https://visualstudio.microsoft.com/downloads/?q=build+tools[Page]
+https://visualstudio.microsoft.com/visual-cpp-build-tools/[Page]
 |
 https://aka.ms/vs/17/release/vs_BuildTools.exe[EXE]
 ).
