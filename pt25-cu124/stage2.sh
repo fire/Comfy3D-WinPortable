@@ -85,7 +85,7 @@ cp -r "$workdir"/Comfy3D_WinPortable/ComfyUI/custom_nodes/ComfyUI-3D-Pack/_Examp
 rm -rf "$workdir"/Comfy3D_WinPortable/ComfyUI/user/default/workflows/_Example_Inputs_Files
 rm -rf "$workdir"/Comfy3D_WinPortable/ComfyUI/user/default/workflows/_Example_Outputs
 
-mv "$workdir"/Comfy3D_WinPortable/ComfyUI/custom_nodes/ComfyUI-3D-Pack/_Example_Workflows/_Example_Inputs_Files/* \
+cp -r "$workdir"/Comfy3D_WinPortable/ComfyUI/custom_nodes/ComfyUI-3D-Pack/_Example_Workflows/_Example_Inputs_Files/. \
     "$workdir"/Comfy3D_WinPortable/ComfyUI/input/
 
 # Copy example input files of SF3D
@@ -135,7 +135,7 @@ $gcs https://github.com/ashawkey/diff-gaussian-rasterization.git
 
 ################################################################################
 # Copy & overwrite attachments
-cp -rf "$workdir"/attachments/* \
+cp -rf "$workdir"/attachments/. \
     "$workdir"/Comfy3D_WinPortable/
 
 # Clean up
