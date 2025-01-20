@@ -1,0 +1,14 @@
+# Make sure use Numpy 1
+numpy==1.26.4
+
+# ComfyUI-Manager's dep "matrix-client" is outdated,
+# and should be replaced by matrix-nio.
+# Ref: https://pypi.org/project/matrix-client/
+# Here I just choose not install it. It's a client for Matrix.org.
+#matrix-client==0.4.0
+
+# Compatibility for CRM (ugly fix)
+open-clip-torch==2.24.0
+
+# Compatibility for CharacterGen (ugly fix)
+diffusers==0.29.1
