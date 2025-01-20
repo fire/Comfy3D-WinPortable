@@ -32,14 +32,14 @@ set HF_HUB_CACHE=%~dp0\HuggingFaceHub
 set TORCH_HOME=%~dp0\TorchHome
 
 @REM 该命令配置 PATH 环境变量。
-set PATH=%PATH%;%~dp0\python_embeded\Scripts
+set PATH=%PATH%;%~dp0\python_standalone\Scripts
 set PATH=%PATH%;%CUDA_HOME%\bin
 
 @REM 该命令配置 NVRTC 会用到的头文件，影响 cumm - spconv - TRELLIS
 @REM SpConv 会对没有预编译的 GPU 架构进行运行时编译
 @REM 参考： https://github.com/traveller59/spconv#prebuilt-gpu-support-matrix
 @REM 来源： https://github.com/traveller59/spconv/blob/master/docs/PURE_CPP_BUILD.md
-set CUMM_INCLUDE_PATH=%~dp0\python_embeded\Lib\site-packages\cumm\include
+set CUMM_INCLUDE_PATH=%~dp0\python_standalone\Lib\site-packages\cumm\include
 
 @REM 该环境变量使 .pyc 缓存文件集中保存在一个文件夹下，而不是随 .py 文件分布。
 set PYTHONPYCACHEPREFIX=%~dp0\pycache
@@ -48,6 +48,6 @@ set PYTHONPYCACHEPREFIX=%~dp0\pycache
 
 @REM 如不希望 ComfyUI 启动后自动打开浏览器，添加 --disable-auto-launch 到下行末尾（注意空格）。
 @REM 如在用 40 系显卡，可添加 --fast 开启实验性高性能模式。
-.\python_embeded\python.exe -s ComfyUI\main.py --windows-standalone-build
+.\python_standalone\python.exe -s ComfyUI\main.py --windows-standalone-build
 
 pause

@@ -11,8 +11,8 @@ echo ###########################################################################
 echo "运行需要环境： C++ 编译套件 (VS 2022), CUDA 工具包, Git。"
 echo "建议修改脚本中的 TORCH_CUDA_ARCH_LIST 以大幅节约编译时间。"
 echo ################################################################################
-echo "安装不会影响你的 Windows 系统，只影响 python_embeded 目录。"
-echo "如在编译期间中断任务，不会影响 python_embeded 。"
+echo "安装不会影响你的 Windows 系统，只影响 python_standalone 目录。"
+echo "如在编译期间中断任务，不会影响 python_standalone 。"
 echo "无论执行成功与否，临时文件均会被保留。"
 echo ################################################################################
 echo "按回车继续……"
@@ -34,53 +34,53 @@ rem set HTTPS_PROXY=http://localhost:1081
 set PIP_INDEX_URL=https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
 set HF_ENDPOINT=https://hf-mirror.com
 
-set PATH=%PATH%;%~dp0\python_embeded\Scripts
+set PATH=%PATH%;%~dp0\python_standalone\Scripts
 
 set CMAKE_ARGS=-DBUILD_opencv_world=ON -DWITH_CUDA=ON -DCUDA_FAST_MATH=ON -DWITH_CUBLAS=ON -DWITH_NVCUVID=ON
 
-.\python_embeded\python.exe -s -m pip install --force-reinstall ^
+.\python_standalone\python.exe -s -m pip install --force-reinstall ^
  spconv-cu124
 
 if not exist ".\tmp_build" mkdir tmp_build
 
-.\python_embeded\python.exe -s -m pip install numpy==1.26.4
+.\python_standalone\python.exe -s -m pip install numpy==1.26.4
 
 git clone --depth=1 https://gh-proxy.com/https://github.com/MrForExample/Comfy3D_Pre_Builds.git ^
  .\tmp_build\Comfy3D_Pre_Builds
 
-.\python_embeded\python.exe -s -m pip wheel -w tmp_build ^
+.\python_standalone\python.exe -s -m pip wheel -w tmp_build ^
  .\tmp_build\Comfy3D_Pre_Builds\_Libs\pointnet2_ops
 
-.\python_embeded\python.exe -s -m pip wheel -w tmp_build ^
+.\python_standalone\python.exe -s -m pip wheel -w tmp_build ^
  .\tmp_build\Comfy3D_Pre_Builds\_Libs\simple-knn
 
-.\python_embeded\python.exe -s -m pip wheel -w tmp_build ^
+.\python_standalone\python.exe -s -m pip wheel -w tmp_build ^
  .\tmp_build\Comfy3D_Pre_Builds\_Libs\vox2seq
 
 @REM PIP 会自动 git clone --recurse-submodules ，无需手动克隆
-.\python_embeded\python.exe -s -m pip wheel -w tmp_build ^
+.\python_standalone\python.exe -s -m pip wheel -w tmp_build ^
  git+https://gh-proxy.com/https://github.com/ashawkey/diff-gaussian-rasterization.git
 
-.\python_embeded\python.exe -s -m pip wheel -w tmp_build ^
+.\python_standalone\python.exe -s -m pip wheel -w tmp_build ^
  git+https://gh-proxy.com/https://github.com/JeffreyXiang/diffoctreerast.git
 
-.\python_embeded\python.exe -s -m pip wheel -w tmp_build ^
+.\python_standalone\python.exe -s -m pip wheel -w tmp_build ^
  git+https://gh-proxy.com/https://github.com/EasternJournalist/utils3d.git#egg=utils3d
 
-.\python_embeded\python.exe -s -m pip wheel -w tmp_build ^
+.\python_standalone\python.exe -s -m pip wheel -w tmp_build ^
  git+https://gh-proxy.com/https://github.com/ashawkey/kiuikit.git
 
-.\python_embeded\python.exe -s -m pip wheel -w tmp_build ^
+.\python_standalone\python.exe -s -m pip wheel -w tmp_build ^
  git+https://gh-proxy.com/https://github.com/NVlabs/nvdiffrast.git
 
-.\python_embeded\python.exe -s -m pip wheel -w tmp_build ^
+.\python_standalone\python.exe -s -m pip wheel -w tmp_build ^
  "git+https://gh-proxy.com/https://github.com/facebookresearch/pytorch3d.git"
 
 echo "编译完成，开始安装……"
 
 del .\tmp_build\numpy-2*.whl
 
-for %%i in (.\tmp_build\*.whl) do .\python_embeded\python.exe -s -m pip install --force-reinstall "%%i"
+for %%i in (.\tmp_build\*.whl) do .\python_standalone\python.exe -s -m pip install --force-reinstall "%%i"
 
 @REM ===========================================================================
 
@@ -91,8 +91,8 @@ for %%i in (.\tmp_build\*.whl) do .\python_embeded\python.exe -s -m pip install 
 @REM MAX_JOBS 含义：限制 Ninja 并行数，避免内存溢出。如果 RAM 大于 96GB，无需限制
 rem set MAX_JOBS=4
 
-rem .\python_embeded\python.exe -s -m pip install flash-attn --no-build-isolation
+rem .\python_standalone\python.exe -s -m pip install flash-attn --no-build-isolation
 
 @REM ===========================================================================
 
-.\python_embeded\python.exe -s -m pip install numpy==1.26.4
+.\python_standalone\python.exe -s -m pip install numpy==1.26.4

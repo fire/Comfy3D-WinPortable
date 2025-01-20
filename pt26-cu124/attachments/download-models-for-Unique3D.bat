@@ -2,7 +2,7 @@
 @REM but are too big to be bundled in archive.
 @REM If you already have them, just put them into the regarding folders.
 
-set PATH=%PATH%;%~dp0\python_embeded\Scripts
+set PATH=%PATH%;%~dp0\python_standalone\Scripts
 
 aria2c.exe ^
  "https://huggingface.co/stablediffusiontutorials/stable-diffusion-v1.5/resolve/main/v1-5-pruned-emaonly.safetensors?download=true" ^
