@@ -33,11 +33,6 @@ cd "$workdir"/Comfy3D_WinPortable/ComfyUI/custom_nodes
 
 # 3D-Pack
 mv "$workdir"/ComfyUI-3D-Pack ./ComfyUI-3D-Pack
-# Make sure Manager won't update its deps anyway
-rm ./ComfyUI-3D-Pack/requirements.txt
-rm ./ComfyUI-3D-Pack/install.py
-rm ./ComfyUI-3D-Pack/pyproject.toml
-rm -rf ./ComfyUI-3D-Pack/_Pre_Builds
 
 # ComfyUI-Manager
 $gcs https://github.com/ltdrdata/ComfyUI-Manager.git

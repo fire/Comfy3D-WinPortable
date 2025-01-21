@@ -23,11 +23,11 @@ mv python python_standalone
 # Download 3D-Pack
 # Note: zip archive doesn't contain the ".git" folder, it's not upgradable.
 cd "$workdir"
-curl -sSL https://github.com/MrForExample/ComfyUI-3D-Pack/archive/a35a737676cf3cbb23360d98032870e242dae199.zip \
-    -o ComfyUI-3D-Pack-a35a737676cf3cbb23360d98032870e242dae199.zip
-unzip -q ComfyUI-3D-Pack-a35a737676cf3cbb23360d98032870e242dae199.zip
-mv ComfyUI-3D-Pack-a35a737676cf3cbb23360d98032870e242dae199 ComfyUI-3D-Pack
-rm ComfyUI-3D-Pack-a35a737676cf3cbb23360d98032870e242dae199.zip
+curl -sSL https://github.com/YanWenKun/ComfyUI-3D-Pack/archive/0601d2165fa906d7c1013925f9182b75d99972a1.zip \
+    -o ComfyUI-3D-Pack-0601d2165fa906d7c1013925f9182b75d99972a1.zip
+unzip -q ComfyUI-3D-Pack-0601d2165fa906d7c1013925f9182b75d99972a1.zip
+mv ComfyUI-3D-Pack-0601d2165fa906d7c1013925f9182b75d99972a1 ComfyUI-3D-Pack
+rm ComfyUI-3D-Pack-0601d2165fa906d7c1013925f9182b75d99972a1.zip
 
 cd "$workdir"
 curl -sSL https://github.com/MrForExample/Comfy3D_Pre_Builds/archive/ac9f238f092b94ba319ce06f3ccd80b9d0f6c8c4.zip \
