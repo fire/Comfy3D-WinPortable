@@ -202,7 +202,7 @@ https://docs.nvidia.com/cuda/archive/12.4.1/cuda-installation-guide-microsoft-wi
 
 2.1. Download the package files from the release page:
 
-** https://github.com/YanWenKun/Comfy3D-WinPortable/releases/tag/r6-pt25
+** https://github.com/YanWenKun/Comfy3D-WinPortable/releases/tag/r7-pt25
 ** Note that there are multiple files (compressed in volumes) that need to be downloaded. Extract it to a convenient place.
 
 2.2. Edit `!FIRST_RUN-compile-install.bat`
