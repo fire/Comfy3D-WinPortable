@@ -1,7 +1,7 @@
 @REM 运行 "All stage Unique3D workflow" 所需模型
 @REM 如果下载失败，尝试手动下载，放到对应目录即可
 
-set PATH=%PATH%;%~dp0\python_embeded\Scripts
+set PATH=%PATH%;%~dp0\python_standalone\Scripts
 
 aria2c.exe ^
  "https://hf-mirror.com/stablediffusiontutorials/stable-diffusion-v1.5/resolve/main/v1-5-pruned-emaonly.safetensors?download=true" ^

@@ -4,10 +4,9 @@ set -eux
 # Chores
 gcs='git clone --depth=1 --no-tags --recurse-submodules --shallow-submodules'
 workdir=$(pwd)
+python_exe="${workdir}/Comfy3D_WinPortable/python_standalone/python.exe"
 export PYTHONPYCACHEPREFIX="${workdir}/pycache2"
-export PATH="$PATH:$workdir/Comfy3D_WinPortable/python_embeded/Scripts"
-
-ls -lahF
+export PATH="$PATH:$workdir/Comfy3D_WinPortable/python_standalone/Scripts"
 
 # MKDIRs
 mkdir -p "$workdir"/Comfy3D_WinPortable/extras
@@ -18,9 +17,9 @@ mkdir -p "${HF_HUB_CACHE}"
 export TORCH_HOME="$workdir/Comfy3D_WinPortable/TorchHome"
 mkdir -p "${TORCH_HOME}"
 
-# Relocate python_embeded.
-# This move is intentional. If it breaks anything, just fast-fail.
-mv  "$workdir"/python_embeded  "$workdir"/Comfy3D_WinPortable/python_embeded
+# Relocate python_standalone
+# This move is intentional. It will fast-fail if anything breaks.
+mv  "$workdir"/python_standalone  "$workdir"/Comfy3D_WinPortable/python_standalone
 
 # Download ComfyUI main app
 git clone https://github.com/comfyanonymous/ComfyUI.git \
@@ -63,14 +62,14 @@ curl -sSL https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealES
 
 # Download models for Impact-Pack & Impact-Subpack
 cd "$workdir"/Comfy3D_WinPortable/ComfyUI/custom_nodes/ComfyUI-Impact-Pack
-"$workdir"/Comfy3D_WinPortable/python_embeded/python.exe -s -B install.py
+$python_exe -s -B install.py
 cd "$workdir"/Comfy3D_WinPortable/ComfyUI/custom_nodes/ComfyUI-Impact-Subpack
-"$workdir"/Comfy3D_WinPortable/python_embeded/python.exe -s -B install.py
+$python_exe -s -B install.py
 
 ################################################################################
 # Run the test (CPU only), also let custom nodes download some models
 cd "$workdir"/Comfy3D_WinPortable
-./python_embeded/python.exe -s -B ComfyUI/main.py --quick-test-for-ci --cpu
+./python_standalone/python.exe -s -B "ComfyUI/main.py" --quick-test-for-ci --cpu
 
 ################################################################################
 # Download u2net model needed by rembg (to avoid download at first start)
