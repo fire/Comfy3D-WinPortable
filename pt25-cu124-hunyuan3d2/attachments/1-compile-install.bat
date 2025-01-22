@@ -1,5 +1,8 @@
 set PATH=%PATH%;%~dp0\python_standalone\Scripts
 
+@REM To set mirror site for PIP, uncomment and edit the two lines below.
+rem set PIP_INDEX_URL=https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+
 @REM Compile texture generation tools of Hunyuan3D-2
 
 .\python_standalone\python.exe -s -m pip install ^

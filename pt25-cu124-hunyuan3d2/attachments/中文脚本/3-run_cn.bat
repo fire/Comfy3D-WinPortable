@@ -5,14 +5,6 @@ set CUDA_HOME=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4
 rem set HTTP_PROXY=http://localhost:1080
 rem set HTTPS_PROXY=http://localhost:1080
 
-@REM 如需启用 HF Hub 实验性高速传输，取消该行注释。仅在千兆比特以上网速有意义。
-@REM https://huggingface.co/docs/huggingface_hub/hf_transfer
-rem set HF_HUB_ENABLE_HF_TRANSFER=1
-
-@REM 如需配置 HuggingFace Access Token（访问令牌），取消注释并编辑。
-@REM 管理令牌： https://huggingface.co/settings/tokens
-rem set HF_TOKEN=
-
 @REM ===========================================================================
 @REM 该部分设置一般无需更改
 

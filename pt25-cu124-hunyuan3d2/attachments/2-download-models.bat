@@ -6,6 +6,9 @@ IF NOT EXIST "%USERPROFILE%\.u2net\u2net.onnx" (
     )
 )
 
+@REM To set mirror site for HuggingFace Hub, uncomment and edit the two lines below.
+rem set HF_ENDPOINT=https://hf-mirror.com
+
 @REM To enable HuggingFace Hub's experimental high-speed file transfer, uncomment the line below.
 @REM https://huggingface.co/docs/huggingface_hub/hf_transfer
 rem set HF_HUB_ENABLE_HF_TRANSFER=1
