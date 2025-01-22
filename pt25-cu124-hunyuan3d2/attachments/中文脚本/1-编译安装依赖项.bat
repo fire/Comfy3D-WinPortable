@@ -11,8 +11,7 @@ set PATH=%PATH%;%~dp0\python_standalone\Scripts
 .\python_standalone\python.exe -s -m pip install ^
  .\Hunyuan3D-2\hy3dgen\texgen\differentiable_renderer
 
-COPY /Y ^
-".\Hunyuan3D-2\hy3dgen\texgen\differentiable_renderer\build\lib.win-amd64-cpython-312\mesh_processor.cp312-win_amd64.pyd" ^
+COPY /Y ".\Hunyuan3D-2\hy3dgen\texgen\differentiable_renderer\build\lib.win-amd64-cpython-312\mesh_processor.cp312-win_amd64.pyd" ^
 ".\Hunyuan3D-2\hy3dgen\texgen\differentiable_renderer\mesh_processor.cp312-win_amd64.pyd"
 
 @REM 重新安装 hf-hub 以便后续下载模型
