@@ -12,8 +12,6 @@ export PATH="$PATH:$workdir/Hunyuan3D2_WinPortable/python_standalone/Scripts"
 mkdir -p "$workdir"/Hunyuan3D2_WinPortable/extras
 export HF_HUB_CACHE="$workdir/Hunyuan3D2_WinPortable/HuggingFaceHub"
 mkdir -p "${HF_HUB_CACHE}"
-export TORCH_HOME="$workdir/Hunyuan3D2_WinPortable/TorchHome"
-mkdir -p "${TORCH_HOME}"
 
 # Relocate python_standalone
 mv  "$workdir"/python_standalone  "$workdir"/Hunyuan3D2_WinPortable/python_standalone
