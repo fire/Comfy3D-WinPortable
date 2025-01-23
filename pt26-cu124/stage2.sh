@@ -114,6 +114,9 @@ mv "$workdir"/Comfy3D_Pre_Builds/_Libs/simple-knn \
 mv "$workdir"/Comfy3D_Pre_Builds/_Libs/vox2seq \
     "$workdir"/Comfy3D_WinPortable/extras/vox2seq
 
+mv "$workdir"/Comfy3D_Pre_Builds/_Libs/hunyuan3d_v2_custom_rasterizer \
+    "$workdir"/Comfy3D_WinPortable/extras/hunyuan3d_v2_custom_rasterizer
+
 # PyTorch3D
 curl -sSL https://github.com/facebookresearch/pytorch3d/archive/refs/heads/main.zip \
     -o temp.zip

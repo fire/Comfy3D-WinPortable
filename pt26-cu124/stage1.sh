@@ -54,6 +54,7 @@ $pip_exe install pointnet2_ops-3.0.0-cp312-cp312-win_amd64.whl
 $pip_exe install pytorch3d-0.7.8-cp312-cp312-win_amd64.whl
 $pip_exe install simple_knn-0.0.0-cp312-cp312-win_amd64.whl
 $pip_exe install vox2seq-0.0.0-cp312-cp312-win_amd64.whl
+$pip_exe install custom_rasterizer-0.1-cp312-cp312-win_amd64.whl
 cd "$workdir"
 
 $pip_exe install -r "$workdir"/pak8.txt
