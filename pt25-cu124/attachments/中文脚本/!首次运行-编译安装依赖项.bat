@@ -47,12 +47,6 @@ set CMAKE_ARGS=-DBUILD_opencv_world=ON -DWITH_CUDA=ON -DCUDA_FAST_MATH=ON -DWITH
  .\extras\diffoctreerast
 
 @REM ===========================================================================
-@REM 用于 混元3D 2.0
-
-.\python_standalone\python.exe -s -m pip install --force-reinstall ^
- .\extras\hunyuan3d_v2_custom_rasterizer
-
-@REM ===========================================================================
 @REM 确保使用 NumPy1
 
 .\python_standalone\python.exe -s -m pip install numpy==1.26.4

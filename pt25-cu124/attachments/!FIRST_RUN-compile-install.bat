@@ -45,12 +45,6 @@ set PATH=%PATH%;%~dp0\python_standalone\Scripts
  .\extras\diffoctreerast
 
 @REM ===========================================================================
-@REM For Hunyuan3D-2
-
-.\python_standalone\python.exe -s -m pip install --force-reinstall ^
- .\extras\hunyuan3d_v2_custom_rasterizer
-
-@REM ===========================================================================
 @REM Ensure NumPy1
 
 .\python_standalone\python.exe -s -m pip install numpy==1.26.4

@@ -57,9 +57,6 @@ git clone --depth=1 https://gh-proxy.com/https://github.com/MrForExample/Comfy3D
 .\python_standalone\python.exe -s -m pip wheel -w tmp_build ^
  .\tmp_build\Comfy3D_Pre_Builds\_Libs\vox2seq
 
-.\python_standalone\python.exe -s -m pip wheel -w tmp_build ^
- .\tmp_build\Comfy3D_Pre_Builds\_Libs\hunyuan3d_v2_custom_rasterizer
-
 @REM PIP 会自动 git clone --recurse-submodules ，无需手动克隆
 .\python_standalone\python.exe -s -m pip wheel -w tmp_build ^
  git+https://gh-proxy.com/https://github.com/ashawkey/diff-gaussian-rasterization.git
