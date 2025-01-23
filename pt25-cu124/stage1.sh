@@ -23,18 +23,18 @@ mv python python_standalone
 # Download 3D-Pack
 # Note: zip archive doesn't contain the ".git" folder, it's not upgradable.
 cd "$workdir"
-curl -sSL https://github.com/YanWenKun/ComfyUI-3D-Pack/archive/0601d2165fa906d7c1013925f9182b75d99972a1.zip \
-    -o ComfyUI-3D-Pack-0601d2165fa906d7c1013925f9182b75d99972a1.zip
-unzip -q ComfyUI-3D-Pack-0601d2165fa906d7c1013925f9182b75d99972a1.zip
-mv ComfyUI-3D-Pack-0601d2165fa906d7c1013925f9182b75d99972a1 ComfyUI-3D-Pack
-rm ComfyUI-3D-Pack-0601d2165fa906d7c1013925f9182b75d99972a1.zip
+curl -sSL https://github.com/YanWenKun/ComfyUI-3D-Pack/archive/cef793fa17c5d89a7ac39e55cf4dc01bb2234310.zip \
+    -o ComfyUI-3D-Pack-cef793fa17c5d89a7ac39e55cf4dc01bb2234310.zip
+unzip -q ComfyUI-3D-Pack-cef793fa17c5d89a7ac39e55cf4dc01bb2234310.zip
+mv ComfyUI-3D-Pack-cef793fa17c5d89a7ac39e55cf4dc01bb2234310 ComfyUI-3D-Pack
+rm ComfyUI-3D-Pack-cef793fa17c5d89a7ac39e55cf4dc01bb2234310.zip
 
 cd "$workdir"
-curl -sSL https://github.com/MrForExample/Comfy3D_Pre_Builds/archive/ac9f238f092b94ba319ce06f3ccd80b9d0f6c8c4.zip \
-    -o Comfy3D_Pre_Builds-ac9f238f092b94ba319ce06f3ccd80b9d0f6c8c4.zip
-unzip -q Comfy3D_Pre_Builds-ac9f238f092b94ba319ce06f3ccd80b9d0f6c8c4.zip
-mv Comfy3D_Pre_Builds-ac9f238f092b94ba319ce06f3ccd80b9d0f6c8c4 Comfy3D_Pre_Builds
-rm Comfy3D_Pre_Builds-ac9f238f092b94ba319ce06f3ccd80b9d0f6c8c4.zip
+curl -sSL https://github.com/MrForExample/Comfy3D_Pre_Builds/archive/5f8984a94f54fcf328f9113aa0afa93a2fc7d060.zip \
+    -o Comfy3D_Pre_Builds-5f8984a94f54fcf328f9113aa0afa93a2fc7d060.zip
+unzip -q Comfy3D_Pre_Builds-5f8984a94f54fcf328f9113aa0afa93a2fc7d060.zip
+mv Comfy3D_Pre_Builds-5f8984a94f54fcf328f9113aa0afa93a2fc7d060 Comfy3D_Pre_Builds
+rm Comfy3D_Pre_Builds-5f8984a94f54fcf328f9113aa0afa93a2fc7d060.zip
 
 # PIP installs
 $pip_exe install --upgrade pip wheel setuptools

@@ -30,11 +30,11 @@ mv ComfyUI-3D-Pack-main ComfyUI-3D-Pack
 rm ComfyUI-3D-Pack-main.zip
 
 cd "$workdir"
-curl -sSL https://github.com/MrForExample/Comfy3D_Pre_Builds/archive/ac9f238f092b94ba319ce06f3ccd80b9d0f6c8c4.zip \
-    -o Comfy3D_Pre_Builds-ac9f238f092b94ba319ce06f3ccd80b9d0f6c8c4.zip
-unzip -q Comfy3D_Pre_Builds-ac9f238f092b94ba319ce06f3ccd80b9d0f6c8c4.zip
-mv Comfy3D_Pre_Builds-ac9f238f092b94ba319ce06f3ccd80b9d0f6c8c4 Comfy3D_Pre_Builds
-rm Comfy3D_Pre_Builds-ac9f238f092b94ba319ce06f3ccd80b9d0f6c8c4.zip
+curl -sSL https://github.com/MrForExample/Comfy3D_Pre_Builds/archive/5f8984a94f54fcf328f9113aa0afa93a2fc7d060.zip \
+    -o Comfy3D_Pre_Builds-5f8984a94f54fcf328f9113aa0afa93a2fc7d060.zip
+unzip -q Comfy3D_Pre_Builds-5f8984a94f54fcf328f9113aa0afa93a2fc7d060.zip
+mv Comfy3D_Pre_Builds-5f8984a94f54fcf328f9113aa0afa93a2fc7d060 Comfy3D_Pre_Builds
+rm Comfy3D_Pre_Builds-5f8984a94f54fcf328f9113aa0afa93a2fc7d060.zip
 
 # PIP installs
 $pip_exe install --upgrade pip wheel setuptools
