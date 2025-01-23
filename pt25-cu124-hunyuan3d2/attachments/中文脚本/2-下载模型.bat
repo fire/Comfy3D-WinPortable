@@ -1,8 +1,18 @@
 @REM 使用国内镜像站点
 set HF_ENDPOINT=https://hf-mirror.com
 
-@REM 复制 u2net.onnx 到用户主目录下，以免启动时还需下载。
+@REM 按需下载并复制 u2net.onnx 到用户主目录下
 IF NOT EXIST "%USERPROFILE%\.u2net\u2net.onnx" (
+    IF NOT EXIST ".\extras\u2net.onnx" (
+        .\python_standalone\Scripts\aria2c.exe --allow-overwrite=false ^
+        --auto-file-renaming=false --continue=true ^
+        -d ".\extras" -o "u2net.tmp" ^
+        "https://gh-proxy.com/https://github.com/danielgatis/rembg/releases/download/v0.0.0/u2net.onnx"
+
+        IF %errorlevel% == 0 (
+            ren ".\extras\u2net.tmp" "u2net.onnx"
+        )
+    )
     IF EXIST ".\extras\u2net.onnx" (
         mkdir "%USERPROFILE%\.u2net" 2>nul
         copy ".\extras\u2net.onnx" "%USERPROFILE%\.u2net\u2net.onnx"

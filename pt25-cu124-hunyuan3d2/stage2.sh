@@ -20,10 +20,6 @@ mv  "$workdir"/python_standalone  "$workdir"/Hunyuan3D2_WinPortable/python_stand
 cd "$workdir"/Hunyuan3D2_WinPortable/
 $gcs https://github.com/YanWenKun/Hunyuan3D-2.git
 
-# Download u2net model needed by rembg (to avoid download at first start)
-curl -sSL https://github.com/danielgatis/rembg/releases/download/v0.0.0/u2net.onnx \
-    -o "$workdir"/Hunyuan3D2_WinPortable/extras/u2net.onnx
-
 # Copy & overwrite attachments
 cp -rf "$workdir"/attachments/. \
     "$workdir"/Hunyuan3D2_WinPortable/

@@ -1,5 +1,15 @@
-@REM Copy u2net.onnx to user's home path, to skip download at first start.
+@REM Download and copy u2net.onnx to user's home path, if needed.
 IF NOT EXIST "%USERPROFILE%\.u2net\u2net.onnx" (
+    IF NOT EXIST ".\extras\u2net.onnx" (
+        .\python_standalone\Scripts\aria2c.exe --allow-overwrite=false ^
+        --auto-file-renaming=false --continue=true ^
+        -d ".\extras" -o "u2net.tmp" ^
+        "https://github.com/danielgatis/rembg/releases/download/v0.0.0/u2net.onnx"
+
+        IF %errorlevel% == 0 (
+            ren ".\extras\u2net.tmp" "u2net.onnx"
+        )
+    )
     IF EXIST ".\extras\u2net.onnx" (
         mkdir "%USERPROFILE%\.u2net" 2>nul
         copy ".\extras\u2net.onnx" "%USERPROFILE%\.u2net\u2net.onnx"
