@@ -38,3 +38,4 @@ jobs:
             # Always draft before release.
             draft: true
             overwrite: true
+            tag_name: r8-hunyuan3d2
