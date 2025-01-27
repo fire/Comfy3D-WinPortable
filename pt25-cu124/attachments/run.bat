@@ -1,5 +1,5 @@
 @REM Edit this first! According to your GPU.
-set TORCH_CUDA_ARCH_LIST=6.1+PTX
+set TORCH_CUDA_ARCH_LIST=8.9
 
 @REM To set HuggingFace Access Token, uncomment and edit the line below.
 @REM https://huggingface.co/settings/tokens
