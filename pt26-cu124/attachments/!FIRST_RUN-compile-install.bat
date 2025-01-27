@@ -1,7 +1,7 @@
 @REM Edit this to your GPU arch.
 @REM You don't need to add the "+PTX". Here it works as a fail-safe (providing forward compatibility).
 
-set TORCH_CUDA_ARCH_LIST=6.1+PTX
+set TORCH_CUDA_ARCH_LIST=8.9
 
 @REM ===========================================================================
 
