@@ -151,8 +151,10 @@ to_conditioning_StableZero123
 
 ## Before You Start...
 
-. Know your GPU's CUDA arch number. For example, RTX 2080 is `7.5`, RTX 3090 is `8.6` and RTX 4090 is `8.9`.
+. Know your GPU's CUDA compute capability (arch number). For example, RTX 2080 is `7.5`, RTX 3090 is `8.6` and RTX 4090 is `8.9`.
 You can find the number in
+https://developer.nvidia.com/cuda-gpus[NVIDIA doc]
+or
 https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/[this article].
 
 . (Optional) If you want to use 
@@ -212,7 +214,7 @@ You can see the line:
  set TORCH_CUDA_ARCH_LIST=6.1+PTX
 
 Edit it according to your 
-https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/[GPU arch].
+https://developer.nvidia.com/cuda-gpus[GPU arch].
 
 For example, for an RTX 4060 Ti, it should be:
 

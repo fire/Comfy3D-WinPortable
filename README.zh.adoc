@@ -196,8 +196,10 @@ https://github.com/YanWenKun/ComfyUI-Docker/tree/main/comfy3d-pt25[Docker 镜像
 
 ### 1. 基本需求
 
-1.1. 了解你的 GPU CUDA 架构版本，比如 RTX 2080 是 `7.5`，RTX 3090 是 `8.6`，RTX 4090 是 `8.9`。
+1.1. 了解你的 GPU CUDA 计算能力（架构版本），比如 RTX 2080 是 `7.5`，RTX 3090 是 `8.6`，RTX 4090 是 `8.9`。
 完整列表可以看
+https://developer.nvidia.cn/cuda-gpus[NVIDIA 文档]
+或
 https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/[这篇文章]
 。
 
@@ -247,7 +249,7 @@ https://docs.nvidia.com/cuda/archive/12.4.1/cuda-installation-guide-microsoft-wi
  set TORCH_CUDA_ARCH_LIST=6.1+PTX
 
 根据你的 
-https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/[GPU 架构]
+https://developer.nvidia.cn/cuda-gpus[GPU 架构]
 来修改。
 
 
