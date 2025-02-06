@@ -7,6 +7,10 @@ pynanoinstantmeshes
 pyfqmr
 pybind11
 
+# For ComfyUI_essentials
+pixeloe
+transparent-background
+
 # Flash Attention
 # flash-attn is useful for Ampere and newer GPUs, but incompatible with older GPUs (Pascal, Turing).
 # Uncomment the line below to install Flash Attention.

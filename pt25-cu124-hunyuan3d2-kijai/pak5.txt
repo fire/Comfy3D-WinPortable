@@ -3,6 +3,7 @@
 cachetools
 clip-interrogator
 color-matcher
+colour-science
 dill
 easydict
 GitPython

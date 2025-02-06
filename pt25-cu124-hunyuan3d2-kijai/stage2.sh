@@ -39,6 +39,7 @@ $gcs https://github.com/Stability-AI/stable-fast-3d.git
 
 # Hunyuan3DWrapper
 $gcs https://github.com/kijai/ComfyUI-Hunyuan3DWrapper.git
+$gcs https://github.com/cubiq/ComfyUI_essentials.git
 
 # Nodes used by 3D-Pack workflows
 $gcs https://github.com/cubiq/ComfyUI_IPAdapter_plus.git
