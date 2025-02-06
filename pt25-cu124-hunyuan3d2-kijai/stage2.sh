@@ -102,6 +102,12 @@ cp -r TRELLIS-main/assets/example_multi_image/. \
 rm TRELLIS-main.zip
 rm -rf TRELLIS-main
 
+# Copy example files of Hunyuan3DWrapper
+cd "$workdir"/Comfy3D_WinPortable/ComfyUI
+mkdir -p user/default/workflows/kijai_Hunyuan3DWrapper
+cp ./custom_nodes/ComfyUI-Hunyuan3DWrapper/example_workflows/*.json \
+    ./user/default/workflows/kijai_Hunyuan3DWrapper/
+
 ################################################################################
 # Source files needed by user compile-install
 cd "$workdir"/Comfy3D_WinPortable/extras/
