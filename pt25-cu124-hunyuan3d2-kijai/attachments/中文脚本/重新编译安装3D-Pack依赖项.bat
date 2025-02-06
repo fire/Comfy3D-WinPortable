@@ -60,8 +60,11 @@ git clone --depth=1 https://gh-proxy.com/https://github.com/MrForExample/Comfy3D
 .\python_standalone\python.exe -s -m pip wheel -w tmp_build ^
  .\ComfyUI\custom_nodes\ComfyUI-Hunyuan3DWrapper\hy3dgen\texgen\custom_rasterizer
 
-.\python_standalone\python.exe -s ^
- .\ComfyUI\custom_nodes\ComfyUI-Hunyuan3DWrapper\hy3dgen\texgen\differentiable_renderer\setup.py build_ext --inplace
+.\python_standalone\python.exe -s -m pip install --force-reinstall ^
+ .\ComfyUI\custom_nodes\ComfyUI-Hunyuan3DWrapper\hy3dgen\texgen\differentiable_renderer
+
+COPY /Y ".\ComfyUI\custom_nodes\ComfyUI-Hunyuan3DWrapper\hy3dgen\texgen\differentiable_renderer\build\lib.win-amd64-cpython-312\mesh_processor.cp312-win_amd64.pyd" ^
+".\ComfyUI\custom_nodes\ComfyUI-Hunyuan3DWrapper\hy3dgen\texgen\differentiable_renderer\mesh_processor.cp312-win_amd64.pyd"
 
 @REM PIP 会自动 git clone --recurse-submodules ，无需手动克隆
 .\python_standalone\python.exe -s -m pip wheel -w tmp_build ^
