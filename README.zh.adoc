@@ -10,6 +10,14 @@ https://github.com/MrForExample/ComfyUI-3D-Pack[ComfyUI-3D-Pack]
 的整合包。
 
 
+## 新：混元 3D 2.0 整合包
+
+* 简单易用（Gradio）： https://github.com/YanWenKun/Hunyuan3D-2-WinPortable
+* 高级全面（ComfyUI）： https://github.com/YanWenKun/Comfy3D-WinPortable/releases/tag/r10-pt25
+
+3D-Pack 中的一些早期模型／工作流与最新的 https://github.com/Tencent/Hunyuan3D-2[Hunyuan3D-2] 不兼容，
+因此另开工程，本整合包则停留在兼容版本。
+
 ## 背景
 
 “通过图片生成 3D 模型”是一项热门研究领域，且有众多开源项目，

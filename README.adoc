@@ -10,6 +10,13 @@ https://github.com/MrForExample/ComfyUI-3D-Pack[ComfyUI-3D-Pack]
 on Windows.
 
 
+## Note for Hunyuan3D-2
+
+Looking for pre-built portables of https://github.com/Tencent/Hunyuan3D-2[Hunyuan3D 2.0]? Check out these repositories:
+
+* (Easy use) https://github.com/YanWenKun/Hunyuan3D-2-WinPortable
+* (Advanced use) https://github.com/YanWenKun/Comfy3D-WinPortable/releases/tag/r10-pt25
+
 ## What Can It Do?
 
 This build, `pt25-cu124`, is based on PyTorch 2.5.1 with CUDA 12.4,
