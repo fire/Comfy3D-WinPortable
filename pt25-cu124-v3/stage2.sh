@@ -37,6 +37,9 @@ $gcs https://github.com/ltdrdata/ComfyUI-Manager.git
 # SF3D
 $gcs https://github.com/Stability-AI/stable-fast-3d.git
 
+# Hunyuan3DWrapper
+$gcs https://github.com/kijai/ComfyUI-Hunyuan3DWrapper.git
+
 # Nodes used by 3D-Pack workflows
 $gcs https://github.com/cubiq/ComfyUI_IPAdapter_plus.git
 $gcs https://github.com/edenartlab/eden_comfy_pipelines.git

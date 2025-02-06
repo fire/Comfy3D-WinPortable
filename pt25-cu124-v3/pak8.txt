@@ -3,6 +3,10 @@ https://github.com/YanWenKun/Comfy3D-WinPortable/releases/download/r7-wheels/tex
 https://github.com/YanWenKun/Comfy3D-WinPortable/releases/download/r7-wheels/uv_unwrapper-0.0.1-cp312-cp312-win_amd64.whl
 pynanoinstantmeshes
 
+# Deps for ComfyUI-Hunyuan3DWrapper
+pyfqmr
+pybind11
+
 # Flash Attention
 # flash-attn is useful for Ampere and newer GPUs, but incompatible with older GPUs (Pascal, Turing).
 # Uncomment the line below to install Flash Attention.
