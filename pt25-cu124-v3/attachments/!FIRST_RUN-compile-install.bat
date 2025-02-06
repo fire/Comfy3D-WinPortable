@@ -45,10 +45,13 @@ set PATH=%PATH%;%~dp0\python_standalone\Scripts
  .\extras\diffoctreerast
 
 @REM ===========================================================================
-@REM For Hunyuan3D-2
+@REM For Hunyuan3DWrapper
 
 .\python_standalone\python.exe -s -m pip install --force-reinstall ^
- .\extras\hunyuan3d_v2_custom_rasterizer
+ .\ComfyUI\custom_nodes\ComfyUI-Hunyuan3DWrapper\hy3dgen\texgen\custom_rasterizer
+
+.\python_standalone\python.exe -s ^
+ .\ComfyUI\custom_nodes\ComfyUI-Hunyuan3DWrapper\hy3dgen\texgen\differentiable_renderer\setup.py build_ext --inplace
 
 @REM ===========================================================================
 @REM Ensure NumPy1

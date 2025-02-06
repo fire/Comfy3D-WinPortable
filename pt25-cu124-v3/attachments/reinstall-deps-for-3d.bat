@@ -54,7 +54,10 @@ git clone --depth=1 https://github.com/MrForExample/Comfy3D_Pre_Builds.git ^
  .\tmp_build\Comfy3D_Pre_Builds\_Libs\vox2seq
 
 .\python_standalone\python.exe -s -m pip wheel -w tmp_build ^
- .\tmp_build\Comfy3D_Pre_Builds\_Libs\hunyuan3d_v2_custom_rasterizer
+ .\ComfyUI\custom_nodes\ComfyUI-Hunyuan3DWrapper\hy3dgen\texgen\custom_rasterizer
+
+.\python_standalone\python.exe -s ^
+ .\ComfyUI\custom_nodes\ComfyUI-Hunyuan3DWrapper\hy3dgen\texgen\differentiable_renderer\setup.py build_ext --inplace
 
 @REM Note that PIP will auto git clone submodules, no need to explicit clone it.
 .\python_standalone\python.exe -s -m pip wheel -w tmp_build ^
